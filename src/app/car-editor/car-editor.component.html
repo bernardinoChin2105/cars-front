@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="CarForm">
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" formtarget="selectedCar.name" maxlength="100">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Model</mat-label>
+            <input matInput formControlName="model" maxlength="100">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Year</mat-label>
+            <input matInput type="text" formControlName="year">
+        </mat-form-field>
+
+        <button type="button" mat-raised-button color="primary" [disabled]="CarForm.invalid"
+            (click)="onSaveClick()">
+            Add</button>
+    </form>
+</div>

@@ -1,0 +1,6 @@
+<mat-form-field class="w-100">
+    <mat-label>Cars</mat-label>
+    <mat-select [(ngModel)]="selectedId" (selectionChange)="onSelectedChange($event)">        
+        <mat-option *ngFor="let item of dataSource" [value]="item.id">{{ item.name }} - {{ item.model }} - {{ item.year }}</mat-option>
+    </mat-select>
+</mat-form-field>
